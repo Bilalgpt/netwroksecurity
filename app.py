@@ -20,7 +20,7 @@ import pymongo
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 from networksecurity.pipeline.training_pipeline import TrainingPipeline
-
+from networksecurity.pipeline.training_pipeline import TrainingPipeline
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, File, UploadFile, Request
 from uvicorn import run as app_run
@@ -126,4 +126,4 @@ async def predict_route(request: Request, file: UploadFile = File(...)):
 if __name__ == "__main__":
     # Add more logging for startup
     logging.info("Starting Network Security API")
-    app_run(app, host="0.0.0.0", port=8000)
+    app_run(app, host="0.0.0.0", port=8005)
